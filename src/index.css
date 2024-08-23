@@ -1,3 +1,7 @@
+:root {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0D0714;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.input {
+  border: 1px solid #3E1671;
+  border-radius: 10px;
+  height: 40px;
+  color: #777777;
+  background-color: #0D0714;
+  padding: 0 10px;
+}
+
+.submit-btn {
+  background-color: #9E78CF;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #3E1671;
+  border-radius: 10px;
+  color: #fff;
+
+}
+
+.todo-card {
+  background: #15101C;
+  border-radius: 10px;
+  color: #9E78CF;
+  /* padding: 10px 5px; */
+  background-color: #15101C;
+}
+
+.completed {
+  color: #78CFB0;
+  text-decoration: line-through;
+}
+
+.action-btn {
+  /* background-color: #9E78CF;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #3E1671;
+  border-radius: 10px;
+  color: #fff; */
+}
+.action-btn .btn {
+  border-radius: 10px;
+  color: #9E78CF;
+}
+
