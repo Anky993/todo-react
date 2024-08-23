@@ -3,17 +3,17 @@
     {
       "id": "3",
       "title": "Buy bread",
-      "done": true
+      "done": false
     },
     {
       "id": "4",
       "title": "Buy butter",
-      "done": true
+      "done": false
     },
     {
       "id": "5",
       "title": "Buy cheese",
-      "done": true
+      "done": false
     },
     {
       "id": "ed83",
