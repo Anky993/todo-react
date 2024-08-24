@@ -4,6 +4,8 @@ import { createContext, useEffect, useState } from "react";
 
 const ToDoContext = createContext();
 
+const apiUrl = process.env.REACT_APP_API_URL
+
 export const ToDoProvider = ({ children }) => {
   useEffect(() => {
     fetchList();
@@ -13,14 +15,15 @@ export const ToDoProvider = ({ children }) => {
 
   // fetch list from server
   const fetchList = async () => {
-    const response = await fetch("http://localhost:5100/todoList");
+    console.log('apiUrl : ', apiUrl)
+    const response = await fetch(`${apiUrl}/todoList`);
     const data = await response.json();
     setList(data);
   };
 
   // completeTask function
   const completeTask = async (id) => {
-    const response = await fetch(`http://localhost:5100/todoList/${id}`, {
+    const response = await fetch(`${apiUrl}/todoList/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +37,7 @@ export const ToDoProvider = ({ children }) => {
   };
 
   const deleteTask = async (id) => {
-    const response = await fetch(`http://localhost:5100/todoList/${id}`, {
+    const response = await fetch(`${apiUrl}/todoList/${id}`, {
       method: "DELETE",
     });
     const updatedList = list.filter((item) => item.id !== id);
@@ -43,7 +46,7 @@ export const ToDoProvider = ({ children }) => {
   
   // addToList function
   const addToList = async (item) => {
-    const response = await fetch("http://localhost:5100/todoList", {
+    const response = await fetch(`${apiUrl}/todoList`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

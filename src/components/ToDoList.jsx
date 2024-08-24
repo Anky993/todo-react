@@ -6,7 +6,7 @@ import ToDoContext from "../context/ToDoContext";
 
 const ToDoList = () => {
   const { list } = useContext(ToDoContext);
-  console.log('dasd', list)
+  console.log('List ', list)
   return (
     <div className="to-do-list done col-10 col-md-8 mx-auto">
         {list.some(taks => !taks.done) &&  <h2>New</h2>}

@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5100",
+    "server1": "json-server --watch db.json --port 5100",
+    "server": "json-server --watch db.json --port 5100 --host 0.0.0.0",
     "dev": "concurrently \"npm start\" \"npm run server\""
   },
   "eslintConfig": {
